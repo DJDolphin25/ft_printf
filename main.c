@@ -6,7 +6,7 @@
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 19:19:37 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/02 23:17:21 by theoppon         ###   ########.fr       */
+/*   Updated: 2025/12/03 23:53:49 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,11 @@ int	ft_printf(const char *format, ...)
 	return (char_printed);
 }
 
+#include <stdio.h>
+
 int	main()
 {
-	ft_printf("%s", "Hello");
+	ft_printf("%%\n");
+	printf("%%\n");
 	return (0);
 }
