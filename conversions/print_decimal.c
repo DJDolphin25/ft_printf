@@ -6,13 +6,19 @@
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 00:03:44 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/06 23:19:53 by theoppon         ###   ########.fr       */
+/*   Updated: 2025/12/07 19:12:01 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "libft.h"
+#include "ft_printf.h"
 
 int	print_decimal(int n)
 {
-	return (print_string(ft_itoa(n)));
-}*/
+	char	*s;
+	int		o;
+
+	s = ft_itoa(n);
+	o = print_string(s);
+	free(s);
+	return (o);
+}

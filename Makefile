@@ -3,20 +3,19 @@ NAME = libftprintf.a
 
 # Compilator and flags
 CC = cc
-INCLUDES = -I . -I libft/
+INCLUDES = -I .
 CFLAGS = -Wall -Wextra -Werror $(INCLUDES)
 
 # Source files
-SRC_CONVERSION = conversions/parser.c \
+SRC = conversions/parser.c \
 			conversions/print_char.c \
 			conversions/print_decimal.c \
 			conversions/print_string.c \
-
-
-SRC_LIBFT = libft/ft_itoa.c
-
-SRC = $(SRC_CONVERSION) $(SRC_LIBFT)
-
+			conversions/print_unsigned_decimal.c \
+			conversions/print_hex_lowercase.c \
+			conversions/print_hex_uppercase.c \
+			conversions/ft_itoa.c \
+			
 OBJ = $(SRC:.c=.o)
 
 # Compile each .c to .o
@@ -31,7 +30,7 @@ all: $(NAME)
 # Create static library
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
-	@echo "$(NAME) has been successfully created"
+	@echo "✅ $(NAME) has been successfully created ✅"
 
 # Clean objects
 clean:
