@@ -6,7 +6,7 @@
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 20:53:42 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/07 23:40:05 by theoppon         ###   ########.fr       */
+/*   Updated: 2025/12/10 21:52:31 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	main(void)
 {
-	printf("%s\n", (char *) NULL);
-	ft_printf("%s\n", (char *) NULL);
+	printf("%p\n"," ");
+	ft_printf("%p\n"," ");
 	return (0);
 }

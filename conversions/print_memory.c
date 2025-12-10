@@ -6,7 +6,7 @@
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 23:36:20 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/07 23:40:27 by theoppon         ###   ########.fr       */
+/*   Updated: 2025/12/10 22:00:27 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ int	print_memory(void *s)
 	int			len;
 	int			res;
 	long int	num;
-
-	num = n;
+	
+	
 	if (num < 0)
 		num = -num;
 	len = count_numbers(num);
@@ -54,7 +54,9 @@ int	print_memory(void *s)
 	if (!str)
 		return (0);
 	str[len] = '\0';
-	conversion(str, len, num);
+	str[0] = '0';
+	str[1] = 'x';
+	conversion(str + 2, len, num);
 	res = print_string(str);
 	free(str);
 	return (res);

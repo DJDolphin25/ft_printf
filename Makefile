@@ -1,4 +1,5 @@
 # Name of the library
+
 NAME = libftprintf.a
 
 # Compilator and flags
@@ -14,6 +15,7 @@ SRC = conversions/parser.c \
 			conversions/print_unsigned_decimal.c \
 			conversions/print_hex_lowercase.c \
 			conversions/print_hex_uppercase.c \
+			conversions/print_memory.c \
 			conversions/ft_itoa.c \
 			
 OBJ = $(SRC:.c=.o)

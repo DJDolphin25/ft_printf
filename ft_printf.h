@@ -6,7 +6,7 @@
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 20:51:43 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/07 22:15:26 by theoppon         ###   ########.fr       */
+/*   Updated: 2025/12/10 21:47:15 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		print_decimal(int n);
 int		print_unsigned_decimal(unsigned int n);
 int		print_hex_lowercase(int n);
 int		print_hex_uppercase(int n);
+int		print_memory(void *s);
 char	*ft_itoa(int n);
 
 #endif
