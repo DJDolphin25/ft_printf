@@ -6,13 +6,13 @@
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 23:09:09 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/07 23:13:09 by theoppon         ###   ########.fr       */
+/*   Updated: 2025/12/22 19:29:29 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	count_numbers(long n)
+static int	count_numbers(unsigned int n)
 {
 	int	count;
 
@@ -25,14 +25,14 @@ static int	count_numbers(long n)
 	return (count);
 }
 
-static char	*conversion(char *str, int len, long num)
+static char	*conversion(char *str, int len, unsigned int num)
 {
 	while (len > 0)
 	{
 		if ((num % 16) < 10)
-			str[len - 1] = (num % 16) + 48;
+			str[len - 1] = (num % 16) + '0';
 		else
-			str[len - 1] = (num % 16) + 55;
+			str[len - 1] = (num % 16) + 'A' - 10;
 		num /= 16;
 		len--;
 	}
@@ -41,12 +41,12 @@ static char	*conversion(char *str, int len, long num)
 
 int	print_hex_uppercase(int n)
 {
-	char		*str;
-	int			len;
-	int			res;
-	long int	num;
+	char				*str;
+	int					len;
+	int					res;
+	unsigned int		num;
 
-	num = n;
+	num = (unsigned int)n;
 	len = count_numbers(num);
 	str = malloc(len + 1);
 	if (!str)
