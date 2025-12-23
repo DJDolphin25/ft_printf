@@ -6,7 +6,7 @@
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 20:06:19 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/07 23:35:58 by theoppon         ###   ########.fr       */
+/*   Updated: 2025/12/23 20:27:01 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 int	ft_printf(const char *format, ...)
 {
 	int			char_printed;
-	int			advance;
 	va_list		arguments;
 
 	char_printed = 0;
-	advance = 0;
 	va_start (arguments, format);
 	while (*format)
 	{
