@@ -1,5 +1,4 @@
 # Name of the library
-
 NAME = libftprintf.a
 
 # Compilator and flags
@@ -47,4 +46,4 @@ re: fclean all
 
 # To test
 test: $(NAME)
-	$(CC) $(CFLAGS) main.c $(NAME) -o test
+	$(CC) $(CFLAGS) testprintf.c $(NAME) -o test
