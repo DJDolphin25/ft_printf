@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testprintf.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/28 19:03:32 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/29 20:01:06 by theoppon         ###   ########.fr       */
+/*   Created: 2025/11/15 17:04:31 by theoppon          #+#    #+#             */
+/*   Updated: 2025/11/15 17:39:35 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
-#include "ft_printf.h"
+#include "libft.h"
 
-int	main(void)
+void	ft_putstr_fd(char *s, int fd)
 {
-	ft_printf("%d", 45);
-	return (0);
+	if (!s)
+		return ;
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
 }
+
+/*#include <fcntl.h>
+
+int	main()
+{	
+	int	fd;
+
+	fd = 1
+	ft_putstr_fd("Hello", fd);
+	return(0);
+}*/

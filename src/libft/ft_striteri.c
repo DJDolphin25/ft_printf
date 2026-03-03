@@ -1,20 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testprintf.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/28 19:03:32 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/29 20:01:06 by theoppon         ###   ########.fr       */
+/*   Created: 2025/11/15 14:51:40 by theoppon          #+#    #+#             */
+/*   Updated: 2025/11/15 16:09:35 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
-#include "ft_printf.h"
+#include "libft.h"
 
-int	main(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	ft_printf("%d", 45);
-	return (0);
+	int	i;
+
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i])
+	{
+		(*f)(i, &s[i]);
+		i++;
+	}
 }
+
+/*#include <stdio.h>
+
+char	f(unsigned int i, char c)
+{
+	char	str;
+	(void)i;
+
+	str = c + 1;
+	return (str);
+}
+
+int main()
+{
+	char	str1[] = "abc";
+	char	*str2;
+
+	str2 = ft_strmapi(str1, f);
+	printf("%s\n", str2);
+}*/

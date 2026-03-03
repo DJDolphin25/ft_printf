@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testprintf.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/28 19:03:32 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/29 20:01:06 by theoppon         ###   ########.fr       */
+/*   Created: 2025/11/06 19:53:15 by theoppon          #+#    #+#             */
+/*   Updated: 2025/11/08 14:58:12 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
-#include "ft_printf.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_tolower(int c)
 {
-	ft_printf("%d", 45);
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
+
+/*#include <stdio.h>
+
+int     main()
+{
+        printf("Letter before change is: %c\n", 'A');
+        printf("Letter after change is: %c\n", ft_tolower('A'));
+        return (0);
+}*/

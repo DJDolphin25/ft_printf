@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testprintf.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
+/*   By: theoppon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/28 19:03:32 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/29 20:01:06 by theoppon         ###   ########.fr       */
+/*   Created: 2025/11/01 21:13:24 by theoppon          #+#    #+#             */
+/*   Updated: 2025/11/01 21:26:46 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
-#include "ft_printf.h"
-
-int	main(void)
+int	ft_isascii(int c)
 {
-	ft_printf("%d", 45);
-	return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }
+
+/*#include <ctype.h>
+#include <stdio.h>
+
+int	main()
+{
+	printf("%d\n", ft_isascii(1));
+	printf("%d\n", isascii(1));
+	return(0);
+}*/

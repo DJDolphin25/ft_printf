@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testprintf.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
+/*   By: theoppon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/28 19:03:32 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/29 20:01:06 by theoppon         ###   ########.fr       */
+/*   Created: 2025/11/01 21:27:55 by theoppon          #+#    #+#             */
+/*   Updated: 2025/11/08 14:56:32 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
-#include "ft_printf.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_isprint(int c)
 {
-	ft_printf("%d", 45);
-	return (0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
 }
+
+/*#include <stdio.h>
+#include <ctype.h>
+
+int	main()
+{
+	printf("%d\n", ft_isprint(35));
+	printf("%d\n", isprint(35));
+	return (0);
+}*/

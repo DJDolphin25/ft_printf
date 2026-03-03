@@ -6,11 +6,11 @@
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 16:44:47 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/07 21:39:03 by theoppon         ###   ########.fr       */
+/*   Updated: 2025/11/15 20:14:28 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	count_numbers(long n)
 {
@@ -60,3 +60,13 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
+
+/*#include <stdio.h>
+
+int	main()
+{
+	int	n = 100000;
+	
+	printf("%s\n", ft_itoa(n));
+	return (0);
+}*/

@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testprintf.c                                       :+:      :+:    :+:   */
+/*   print_decimal.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/28 19:03:32 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/29 20:01:06 by theoppon         ###   ########.fr       */
+/*   Created: 2025/12/04 00:03:44 by theoppon          #+#    #+#             */
+/*   Updated: 2025/12/07 19:12:01 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
 #include "ft_printf.h"
+#include "libft.h"
 
-int	main(void)
+int	print_decimal(int n)
 {
-	ft_printf("%d", 45);
-	return (0);
+	char	*s;
+	int		o;
+
+	s = ft_itoa(n);
+	o = print_string(s);
+	free(s);
+	return (o);
 }

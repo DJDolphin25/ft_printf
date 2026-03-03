@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_decimal.c                                    :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: theoppon <theoppon@student.42belgium.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/04 00:03:44 by theoppon          #+#    #+#             */
-/*   Updated: 2025/12/07 19:12:01 by theoppon         ###   ########.fr       */
+/*   Created: 2025/11/13 21:48:06 by theoppon          #+#    #+#             */
+/*   Updated: 2025/11/15 17:38:08 by theoppon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	print_decimal(int n)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*s;
-	int		o;
-
-	s = ft_itoa(n);
-	o = print_string(s);
-	free(s);
-	return (o);
+	write(fd, &c, 1);
 }
+
+/*#include <fcntl.h>
+
+int	main()
+{	
+	int	fd;
+
+	fd = 1;
+	ft_putchar_fd('t', fd);
+	return(0);
+}*/
